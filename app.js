@@ -4,7 +4,7 @@ const config = {
   rtmp: {
     port: 1935, // RTMP port remains static as Heroku does not dynamically assign this
     chunk_size: 60000,
-    gop_cache: true,
+    gop_cache: false,
     ping: 30,
     ping_timeout: 60,
   },
@@ -17,3 +17,4 @@ const config = {
 var nms = new NodeMediaServer(config);
 console.log(nms);
 nms.run();
+go;
