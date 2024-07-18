@@ -17,4 +17,3 @@ const config = {
 var nms = new NodeMediaServer(config);
 console.log(nms);
 nms.run();
-go;
