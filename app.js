@@ -1,4 +1,5 @@
 const NodeMediaServer = require("node-media-server");
+const path = require("path");
 
 const config = {
   rtmp: {
@@ -24,7 +25,7 @@ const config = {
       },
     ],
   },
-  mediaRoot: "/var/media",
+  mediaRoot: path.resolve("/var/media"),
 };
 
 // Ensure the directory exists and is writable
