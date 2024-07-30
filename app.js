@@ -24,6 +24,7 @@ const config = {
       },
     ],
   },
+  mediaRoot: "/var/media",
 };
 
 var nms = new NodeMediaServer(config);
