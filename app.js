@@ -27,6 +27,13 @@ const config = {
   mediaRoot: "/var/media",
 };
 
+// Ensure the directory exists and is writable
+const fs = require("fs");
+const mediaRoot = config.mediaRoot;
+if (!fs.existsSync(mediaRoot)) {
+  fs.mkdirSync(mediaRoot, { recursive: true });
+}
+
 var nms = new NodeMediaServer(config);
 console.log(nms);
 nms.run();
